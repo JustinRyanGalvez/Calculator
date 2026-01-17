@@ -1,0 +1,75 @@
+.calculator {
+  border: 2px solid grey;
+  padding: 10px;
+  /* This prevents taking up the full width of the div and instead just of the contents */
+  display: inline-block;
+  width: 50%;
+  border-radius: 2px;
+}
+
+.result {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+  border-radius: 1px;
+  padding-left: 5px;
+  /* Makes the maximum height allowed for the result even if not 30px */
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.row {
+  display: flex;
+  height: 30px;
+  /* Allows spacing between each element within the row. */
+  /* Using padding or margin will emphasize the row itself and not the elements within */
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.btn {
+  /* Allows buttons to be same size of the container */
+  flex: 1;
+  background-color: gainsboro;
+  border: 1px solid grey;
+}
+
+/* Looking into a class for this HTML tag */
+.grey button {
+  background-color: darkgray;
+}
+
+/* When hovering a class, lighten the background box */
+.btn:hover {
+  opacity: 80%;
+}
+
+/* When clicking on it - click or holding works */
+.btn:active {
+  background-color: slategray;
+}
+
+/* This makes a column */
+.main-btns {
+  display: flex;
+  gap: 5px;
+}
+
+/* Both of these are related to the display: flex; property listed above */
+/* I want the buttons to take up the column / 4 = 25% each */
+.numbers {
+  flex: 4;
+}
+
+/* Take up the entire column space */
+.equal-btn {
+  flex: 1;
+  /* This is necessary since the margin-top was applied to the row but not for this particular button */
+  margin-top: 10px;
+}
